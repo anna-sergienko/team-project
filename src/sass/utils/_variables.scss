@@ -1,0 +1,30 @@
+// цвета шрифтов
+$primary-font-color: #d41443;
+$secondary-font-color: #ffffff;
+$base-color: #000000;
+$minor-color: #907e82;
+$date-font-color: #ffa5ba;
+
+// цвета фонов
+$primary-bcg-color: #ffb8ca;
+$secondary-bcg-color: #fff5f6;
+$minor-bcg-color: #e5e5e5;
+$primary-card-color: #f0d1a5;
+$secondary-card-color: #c2e297;
+$comment-bcg-color: #fafafa;
+$icon-bcg-color: #fea5bb;
+$primary-btn-color: #c7133e;
+
+// цвет кнопки при hover/focus
+$secondary-btn-color: #ecebeb;
+
+// цвет тени на карточках контактов
+$shadow-color: rgba(212, 20, 67, 0.1);
+
+// функция перехода анимаций
+$time-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// точки перелома
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
