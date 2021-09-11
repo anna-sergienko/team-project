@@ -1,20 +1,45 @@
+// Контейнер
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container__box {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+// Карточки
 .contacts {
-  // display: flex;
-  // flex-wrap: wrap;
-  // flex-direction: column;
-  // justify-content: space-between;
+  display: block;
   padding: 43px 21px;
   width: 220px;
-
   background-color: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 }
+.contacts:not(:last-child) {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
 .contacts__title {
+  display: inline-block;
+  margin-bottom: 25px;
   width: 80px;
   align-items: center;
   text-align: center;
   background-color: #f0d1a5;
+  border-radius: 4px;
+}
+.contacts__title--item {
+  display: inline-block;
+  margin-bottom: 25px;
+  width: 130px;
+  align-items: center;
+  text-align: center;
+  background-color: #c2e297;
   border-radius: 4px;
 }
 .contacts__title--text {
@@ -27,9 +52,10 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+.contacts__title:nth-child(1n) {
+}
 .contacts-item {
-  display: inline-block;
-  // justify-content: flex-start;
+  margin-bottom: 25px;
   width: 179px;
 }
 
@@ -50,7 +76,16 @@
   line-height: 1.5;
   color: #907e82;
 }
-
+.schedule {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+.schedule__box {
+  margin-bottom: 10px;
+}
 .schedule__title {
   font-family: 'DM Sans';
   font-style: normal;
@@ -75,4 +110,43 @@
   font-size: 12px;
   line-height: 1.5;
   color: #907e82;
+}
+// Кнопочки
+.contact__buttons {
+  // display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 54px;
+}
+
+.contact__buttons--item:not(:last-child) {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+.contact__buttons--text {
+  // display: flex;
+  align-items: center;
+  text-align: center;
+  width: 161px;
+  height: 44px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #d41342;
+}
+.contact__buttons--text:not(:last-child) {
+  background-color: #fff;
+}
+
+.button__icon {
+  // display: flex;
+  // margin-left: 10px;
 }
