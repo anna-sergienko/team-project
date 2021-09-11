@@ -1,0 +1,99 @@
+.footer {
+  display: flex;
+  background-color: $secondary-bcg-color;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.footer-name {
+  margin-bottom: 43px;
+}
+.section-subtitle {
+  font-family: 'TitanOne';
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $date-font-color;
+  font-size: 18px;
+  line-height: 1.13;
+  letter-spacing: 0.04em;
+  margin-bottom: 15px;
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+  }
+}
+.section-title {
+  color: $primary-font-color;
+  font-family: 'TitanOne';
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.13;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+  }
+}
+.footer-contacts {
+  display: flex;
+  align-items: flex-end;
+}
+.footer-socials {
+  display: flex;
+  margin-bottom: 45px;
+}
+.footer-socials__list:not(:last-child) {
+  margin-right: 34px;
+}
+.footer-contacts__label {
+  color: $base-color;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.8;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+.footer-contacts__tel {
+  color: $primary-font-color;
+}
+.footer-socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $icon-bcg-color;
+  fill: $secondary-font-color;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  @include transition1(fill);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-btn-color;
+  }
+}
+
+.footer-socials__icon {
+  width: 20px;
+  height: 20px;
+}
