@@ -1,27 +1,39 @@
 // Контейнер
-.container {
-  display: flex;
-  flex-direction: column;
-}
 .container__box {
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  justify-content: center;
+  @media screen and (max-width: 767px) {
     flex-direction: column;
+  }
+  @media screen and (min-width: 768px) {
+    // justify-content: space-between;
   }
 }
 // Карточки
 .contacts {
   display: block;
   padding: 43px 21px;
-  width: 220px;
+  min-width: 220px;
   background-color: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+  @media screen and (min-width: 768px) {
+    padding: 50px 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 330px;
+  }
 }
 .contacts:not(:last-child) {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 20px;
+  }
+  @media screen and (min-width: 767px) {
+    margin-right: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 29px;
   }
 }
 .contacts__title {
@@ -52,8 +64,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.contacts__title:nth-child(1n) {
-}
+
 .contacts-item {
   margin-bottom: 25px;
   width: 179px;
@@ -113,20 +124,26 @@
 }
 // Кнопочки
 .contact__buttons {
-  // display: flex;
+  display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin-top: 54px;
-}
-
-.contact__buttons--item:not(:last-child) {
   @media screen and (max-width: 768px) {
-    margin-bottom: 10px;
+    flex-direction: column;
+    margin-top: 54px;
+  }
+  @media screen and (max-width: 1279px) {
+    margin-top: 61px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 86px;
   }
 }
+
 .contact__buttons--text {
-  // display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-items: center;
   text-align: center;
   width: 161px;
@@ -137,16 +154,32 @@
   font-size: 16px;
   line-height: 21px;
   border-radius: 22px;
-  border: none;
-  cursor: pointer;
-  color: #ffffff;
   background-color: #d41342;
+  color: #ffffff;
+  // border: none;
+  cursor: pointer;
 }
 .contact__buttons--text:not(:last-child) {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+.contact__buttons--text:not(:first-child) {
   background-color: #fff;
+  color: #d41342;
 }
 
-.button__icon {
-  // display: flex;
-  // margin-left: 10px;
+.first__icon {
+  display: block;
+  fill: rgba(255, 255, 255, 1);
+  width: 8px;
+  height: 12px;
+  margin-left: 2px;
+}
+.second__icon {
+  display: block;
+  fill: #d41342;
+  width: 8px;
+  height: 12px;
+  margin-left: 13px;
 }
