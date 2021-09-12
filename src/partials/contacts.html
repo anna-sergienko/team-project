@@ -1,15 +1,6 @@
 <section class="section">
-    <div class="container">
+    <div class="container container-bcg">
         <div class="container__box">
-            <picture>
-                <source class="members__img" srcset="/src/images/contacts/RedDots.png 1x, /src/images/contacts/RedDots@2x.png 2x"
-                    media="(min-width: 450px)" type="image/png" />
-                <source class="members__img" srcset="/src/images/contacts/RedDots.png 1x, /src/images/contacts/RedDots.png 2x"
-                    media="(min-width: 768px)" type="image/png" />
-                <source class="members__img" srcset="/src/images/contacts/RedDots.png 1x, /src/images/contacts/RedDots.png 2x"
-                    media="(min-width: 1200px)" type="image/png" />
-                <img src="/src/images/contacts/RedDots.png" alt="Red Dots">
-            </picture>
             <h1 hidden>Contacts</h1>
             <div class="contacts">
                 <div class="contacts__title">
@@ -100,20 +91,18 @@
             </div>
         </div>
         <div class="contact__buttons">
-            <button type="button" class="contact__buttons--text">Our Locations
-                <svg class="first__icon">
-                    <use href="./images/sprite/sprite.svg#icon-arrow"></use>
-                </svg>
-            </button>
-            <button type="button" class="contact__buttons--text">Franchise
-                <svg class="second__icon">  
+            <a class="contact__buttons--first contact__buttons--distance" href="https://goo.gl/maps/ka7BPt1R56QFhWXe8" target="_blank"> 
+                <button type="button" class="contact__buttons--item contact__buttons--fhf">Our Locations
+                    <svg class="first__icon--arrow">
+                        <use href="./images/sprite/sprite.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+            </a>
+            <button type="button" class="contact__buttons--item contact__buttons--second contact__buttons--distance">Franchise
+                <svg class="second__icon--arrow">  
                     <use href="./images/sprite/sprite.svg#icon-arrow"></use>
                 </svg>
             </button>
         </div>
     </div>
 </section>
-
-    
-           
-
