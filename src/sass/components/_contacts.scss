@@ -1,4 +1,7 @@
 // Контейнер
+.container {
+  background-color: #fff5f6;
+}
 .container__box {
   display: flex;
   align-items: center;
@@ -156,7 +159,7 @@
   border-radius: 22px;
   background-color: #d41342;
   color: #ffffff;
-  // border: none;
+  border: none;
   cursor: pointer;
 }
 .contact__buttons--text:not(:last-child) {
