@@ -3,16 +3,21 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(/images/contacts/RedDots.png);
   background-color: #fff5f6;
   width: 100%;
   padding-top: 86px;
   padding-bottom: 113px;
-  @media screen and (max-width: 767px) {
+
+  background-image: linear-gradient(to top, rgb(255, 245, 246) 90%, rgb(255, 255, 255) 0%),
+    url('../images/contacts/RedDots.png');
+
+  @media screen and (min-width: 767px) {
     padding-top: 119px;
     padding-bottom: 158px;
+    background-image: linear-gradient(to top, rgb(255, 245, 246) 80%, rgb(255, 255, 255) 0%),
+      url('../images/contacts/RedDots@2x.png');
   }
-  @media screen and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     padding-top: 132px;
     padding-bottom: 165px;
   }
@@ -201,7 +206,7 @@
   }
 }
 .contact__buttons--item {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__buttons--item {
   display: flex;
