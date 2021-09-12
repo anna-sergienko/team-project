@@ -3,7 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(/src/images/contacts/RedDots.png);
+  background-image: url(/images/contacts/RedDots.png);
   background-color: #fff5f6;
   width: 100%;
 }
@@ -13,8 +13,6 @@
   justify-content: center;
   @media screen and (max-width: 767px) {
     flex-direction: column;
-  }
-  @media screen and (min-width: 768px) {
   }
 }
 // Карточки
