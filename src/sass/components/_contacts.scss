@@ -6,6 +6,16 @@
   background-image: url(/images/contacts/RedDots.png);
   background-color: #fff5f6;
   width: 100%;
+  padding-top: 86px;
+  padding-bottom: 113px;
+  @media screen and (max-width: 767px) {
+    padding-top: 119px;
+    padding-bottom: 158px;
+  }
+  @media screen and (max-width: 1280px) {
+    padding-top: 132px;
+    padding-bottom: 165px;
+  }
 }
 .container__box {
   display: flex;
