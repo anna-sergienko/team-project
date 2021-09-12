@@ -1,0 +1,406 @@
+.container {
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 36px;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 115px;
+    width: 1280px;
+  }
+}
+
+body {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* DMSans-Bold-700 */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff");
+}
+/* DMSans-Medium-500 */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+  src: url("../fonts/DMSans-Medium.woff2") format("woff2"), url("../fonts/DMSans-Medium.woff") format("woff");
+}
+/* DMSans-Regular-400 */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff");
+}
+/* TitanOne-regular */
+@font-face {
+  font-family: "TitanOne";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/TitanOne.woff2") format("woff2"), url("../fonts/TitanOne.woff") format("woff");
+}
+.mobile-menu {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-140%) translateY(0%);
+  visibility: hidden;
+  pointer-events: none;
+  overflow: scroll;
+  z-index: 3;
+  padding-top: 60px;
+  background-color: #E17992;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
+}
+.mobile-menu.is-open {
+  transform: translateX(-70%) translateY(0%);
+  visibility: visible;
+  pointer-events: visible;
+}
+@media screen and (min-width: 1199px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.close-button {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.mobile-menu-close-icon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 28px;
+  top: 23px;
+  cursor: pointer;
+}
+
+.mobile-menu-button {
+  display: flex;
+  width: 186px;
+  height: 44px;
+  margin: 0 auto 19px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  border-color: transparent;
+  cursor: pointer;
+  font-family: #d41443;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  background-color: #fff;
+  color: #ffb8ca;
+  transition-property: background-color;
+  transition-duration: 250ms;
+}
+
+.mobile-menu-button:hover,
+.mobile-menu-button:focus {
+  background-color: #ecebeb;
+}
+
+.mobile-menu-vector-icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 14px;
+  margin-top: 3px;
+}
+
+.mobile-menu-nav-item {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e18298;
+  list-style: none;
+  font-family: DM Sans;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.mobile-menu-first-item {
+  border-top: 1px solid #e18298;
+}
+
+.mobile-menu-nav-link {
+  margin-left: 11%;
+  text-decoration: none;
+  color: #fff;
+  transition-property: color;
+  transition-duration: 250ms;
+}
+
+.mobile-menu-nav-link:hover,
+.mobile-menu-nav-link:focus {
+  color: #d41443;
+}
+
+.container__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .container__box {
+    flex-direction: column;
+  }
+}
+.contacts {
+  display: block;
+  padding: 43px 21px;
+  min-width: 220px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    padding: 50px 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contacts {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .contacts:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contacts:not(:last-child) {
+    margin-right: 29px;
+  }
+}
+
+.contacts__title {
+  display: inline-block;
+  margin-bottom: 25px;
+  width: 80px;
+  align-items: center;
+  text-align: center;
+  background-color: #f0d1a5;
+  border-radius: 4px;
+}
+
+.contacts__title--item {
+  display: inline-block;
+  margin-bottom: 25px;
+  width: 130px;
+  align-items: center;
+  text-align: center;
+  background-color: #c2e297;
+  border-radius: 4px;
+}
+
+.contacts__title--text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contacts-item {
+  margin-bottom: 25px;
+  width: 179px;
+}
+
+.contacts__location {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.contacts__text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.schedule {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.schedule__box {
+  margin-bottom: 10px;
+}
+
+.schedule__title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  color: #000000;
+}
+
+.schedule__text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  color: #ffa5ba;
+}
+
+.address__mail,
+.address__tel {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.contact__buttons {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .contact__buttons {
+    flex-direction: column;
+    margin-top: 54px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .contact__buttons {
+    margin-top: 61px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact__buttons {
+    margin-top: 86px;
+  }
+}
+
+.contact__buttons--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 161px;
+  height: 44px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 22px;
+  background-color: #d41342;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .contact__buttons--text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.contact__buttons--text:not(:first-child) {
+  background-color: #fff;
+  color: #d41342;
+}
+
+.first__icon {
+  display: block;
+  fill: white;
+  width: 8px;
+  height: 12px;
+  margin-left: 2px;
+}
+
+.second__icon {
+  display: block;
+  fill: #d41342;
+  width: 8px;
+  height: 12px;
+  margin-left: 13px;
+}/*# sourceMappingURL=main.css.map */
