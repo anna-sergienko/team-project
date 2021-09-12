@@ -224,6 +224,12 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
+  @media screen and (min-width: 768px) {
+    width: 191px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 198px;
+  }
 }
 .contact__buttons--distance:not(:last-child) {
   @media screen and (max-width: 768px) {
