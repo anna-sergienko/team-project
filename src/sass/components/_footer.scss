@@ -1,10 +1,13 @@
-
-
 .footer {
   display: flex;
   background-color: $secondary-bcg-color;
-  padding: 40px 0;
-
+  padding-bottom: 43px;
+  @media screen and (min-width: 767px) {
+    padding-bottom: 91px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 97px;
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -16,7 +19,7 @@
   &__first {
     font-family: 'TitanOne';
     font-weight: 400;
-    line-height: 1.13;;
+    line-height: 1.13;
     text-transform: uppercase;
     width: 100%;
     margin-bottom: 43px;
@@ -39,7 +42,7 @@
       font-size: 58px;
     }
   }
-  &__subtitle { 
+  &__subtitle {
     color: $date-font-color;
     font-size: 18px;
     letter-spacing: 0.04em;
@@ -60,7 +63,7 @@
       width: 50%;
     }
   }
-  &__tel{
+  &__tel {
     color: $base-color;
     font-family: 'DM Sans';
     font-weight: 700;
@@ -83,7 +86,7 @@
 
 .footer-socials {
   display: flex;
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,18 +104,18 @@
       background-color: $primary-btn-color;
     }
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
 
-    svg{    
+    svg {
       width: 20px;
       height: 20px;
     }
   }
 }
 
-.copyright{
+.copyright {
   padding: 25px 20px;
   display: inline-flex;
   flex-direction: column;
@@ -133,7 +136,7 @@
 }
 
 @media screen and (min-width: $mobile) {
-  .copyright{
+  .copyright {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
