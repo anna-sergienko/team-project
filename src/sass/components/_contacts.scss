@@ -1,4 +1,22 @@
 // Контейнер
+.container-bcg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/contacts/RedDots.png);
+  background-color: #fff5f6;
+  width: 100%;
+  padding-top: 86px;
+  padding-bottom: 113px;
+  @media screen and (max-width: 767px) {
+    padding-top: 119px;
+    padding-bottom: 158px;
+  }
+  @media screen and (max-width: 1280px) {
+    padding-top: 132px;
+    padding-bottom: 165px;
+  }
+}
 .container__box {
   display: flex;
   align-items: center;
@@ -6,26 +24,28 @@
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
-  @media screen and (min-width: 768px) {
-    // justify-content: space-between;
-  }
 }
 // Карточки
 .contacts {
   display: block;
-  padding: 43px 21px;
-  min-width: 220px;
   background-color: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+  padding: 43px 21px;
   @media screen and (min-width: 768px) {
     padding: 50px 32px;
   }
   @media screen and (min-width: 1280px) {
+    padding: 52px 44px 61px 43px;
+  }
+}
+.contacts-box {
+  width: 220px;
+  @media screen and (min-width: 1280px) {
     width: 330px;
   }
 }
-.contacts:not(:last-child) {
+.contacts-box:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
@@ -62,12 +82,16 @@
   line-height: 1.83;
   color: #ffffff;
   letter-spacing: 0.04em;
+  text-align: center;
   text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.87;
+  }
 }
 
 .contacts-item {
   margin-bottom: 25px;
-  width: 179px;
 }
 
 .contacts__location {
@@ -78,6 +102,10 @@
   line-height: 1.83;
   letter-spacing: 0.04em;
   color: #000000;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.85;
+  }
 }
 .contacts__text {
   font-family: 'DM Sans';
@@ -86,6 +114,14 @@
   font-size: 12px;
   line-height: 1.5;
   color: #907e82;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.64;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.81;
+  }
 }
 .schedule {
   border-top: 1px solid #e1e1e1;
@@ -104,6 +140,15 @@
   font-size: 12px;
   line-height: 1.83;
   color: #000000;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.04em;
+  }
 }
 .schedule__text {
   font-family: 'DM Sans';
@@ -112,6 +157,14 @@
   font-size: 12px;
   line-height: 1.83;
   color: #ffa5ba;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.87;
+  }
 }
 .address__mail,
 .address__tel {
@@ -121,6 +174,14 @@
   font-size: 12px;
   line-height: 1.5;
   color: #907e82;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.81;
+  }
 }
 // Кнопочки
 .contact__buttons {
@@ -139,8 +200,10 @@
     margin-top: 86px;
   }
 }
-
-.contact__buttons--text {
+.contact__buttons--item {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact__buttons--item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,33 +216,46 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
+  background-color: #d41443;
   border-radius: 22px;
-  background-color: #d41342;
   color: #ffffff;
-  // border: none;
+  border: none;
   cursor: pointer;
 }
-.contact__buttons--text:not(:last-child) {
+.contact__buttons--distance:not(:last-child) {
   @media screen and (max-width: 768px) {
     margin-bottom: 10px;
   }
+  @media screen and (min-width: 768px) {
+    margin-right: 15px;
+  }
 }
-.contact__buttons--text:not(:first-child) {
+.contact__buttons--second {
   background-color: #fff;
   color: #d41342;
 }
 
-.first__icon {
+.first__icon--arrow {
   display: block;
   fill: rgba(255, 255, 255, 1);
   width: 8px;
   height: 12px;
   margin-left: 2px;
 }
-.second__icon {
+.second__icon--arrow {
   display: block;
   fill: #d41342;
   width: 8px;
   height: 12px;
   margin-left: 13px;
+}
+///////////Ховер
+.contact__buttons--second:hover,
+.contact__buttons--second:focus {
+  background-color: #ecebeb;
+}
+.contact__buttons--fhf:hover,
+.contact__buttons--fhf:focus {
+  background-color: #e0076f;
+  border-radius: 22px;
 }
