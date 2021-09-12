@@ -1,0 +1,445 @@
+.hero__section {
+    width: 100vw;
+    height: 502px;
+    background-color: $primary-bcg-color;
+
+@media screen and (max-width: 479px) {
+    max-width: 480px;
+}
+@media screen and (min-width: $tablet) and (max-width: 1279px) {
+    height: 399px;
+}
+@media screen and (min-width: $desktop) {
+    height: 665px;
+}
+}
+
+// Hero-container (relative)
+.hero__container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 502px;
+
+@media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 700px;
+    height: 399px;
+}
+@media screen and (min-width: $desktop) {
+    width: 1280px;
+    height: 665px;
+}
+}
+
+// Header
+.hero__header {
+    display: block;
+    position: absolute;
+    top: 193px;
+    left: 20;
+    z-index: 999;
+@media screen and (min-width: $tablet) and (max-width: 1279px) {
+    top: 102px;
+    left: 0;
+}
+@media screen and (min-width: $desktop) {
+    top: 171px;
+    left: 115px;
+}
+}
+
+.hero__title {
+    display: block;
+    width: 218px;
+    margin-bottom: 19px;
+
+    font-family: 'TitanOne';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $secondary-font-color;
+
+@media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-bottom: 20px;
+    width: 162px;
+    font-size: 22px;
+    line-height: 1.14;
+}
+@media screen and (min-width: $desktop) {
+    margin-bottom: 25px;
+    width: 277px;
+    font-size: 38px;
+    line-height: 1.16;
+}
+}
+
+.hero__title-word {
+    font-family: 'TitanOne';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 96.5%;
+    text-transform: uppercase;
+
+    color: $primary-font-color;
+
+@media screen and (min-width: $tablet) and (max-width: 1279px) {
+    font-size: 34px;
+    line-height: 90.5%;
+}
+@media screen and (min-width: $desktop) {
+    font-size: 58px;
+    line-height: 90.5%;
+}
+}
+
+.hero__buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero__link {
+    text-decoration: none;
+}
+
+.hero__button {
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: center;
+
+    border-radius: 20px;
+    border: none;
+
+@media screen and (min-width: $desktop) {
+   height: 40px;
+   font-size: 14px;
+   line-height: 1.29;
+}
+
+}
+
+.button__products {
+    width: 61px;
+    margin-right: 8px;
+    background: $primary-font-color;
+    @include transition1(background-color);
+
+    &:hover,
+    &:focus {
+        background-color: $primary-btn-color;
+    }
+
+@media screen and (min-width: $desktop) {
+   min-width: 104px;
+   margin-right: 15px;
+}
+
+}
+
+.button__how-made {
+    min-width: 83px;
+    background: $secondary-font-color;
+    @include transition1(background-color);
+
+    &:hover,
+    &:focus {
+    background-color: $secondary-btn-color;
+    }
+
+@media screen and (min-width: $desktop) {
+   min-width: 138px;
+}
+}
+
+.hero__link.products {
+    color: $secondary-font-color;
+}
+
+.hero__link.how-made {
+    color: $primary-font-color;
+}
+
+
+// Hero_Ice-cream
+.hero__ice-cream {
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+    z-index: 998;
+    width: 171px;
+    height: 410px;
+
+@media screen and (min-width: $tablet) and (max-width: 1279px) {
+    bottom: 0;
+    left: 347px;
+    width: 143px;
+    height: 336px;
+}
+
+@media screen and (min-width: $desktop) {
+    bottom: 1;
+    right: 450px;
+    width: 236px;
+    height: 557px;
+}
+}
+
+// Hero_big-round
+.hero__round {
+    position: absolute;
+    top: 83px;
+    left: 16px;
+    width: 346px;
+    height: 344px;
+    z-index: 997;
+    border-radius: 50%;
+    background: $date-font-color;
+
+@media screen and (max-width: 479px) {
+    max-width: 346px;
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1279px) {
+    top: 31px;
+    left: 273px;
+    width: 324px;
+    height: 326px;
+}
+@media screen and (min-width: $desktop) {
+    top: 52px;
+    left: 475px;
+    width: 538px;
+    height: 538px;
+}
+}
+
+
+// Hero_quantities
+.hero__quantities {
+    position: absolute;
+    top: 94px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+@media screen and (max-width: 767px) {
+    & {
+        display: none;
+    }
+}
+@media screen and (min-width: $desktop) {
+    top: 156px;
+    right: 97px;
+}
+}
+
+.hero__number {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   
+    &:not(:last-child) {
+        margin-bottom: 13px;
+    }
+
+@media screen and (min-width: $desktop) {
+   &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}}
+
+.hero__number.first {
+    width: 43px;
+    height: 44px;
+
+@media screen and (min-width: $desktop) {
+    width: 72px;
+    height: 77px;
+}}
+
+.hero__number.second {
+    width: 51px;
+    height: 43px;
+
+@media screen and (min-width: $desktop) {
+    width: 92px;
+    height: 76px;
+}
+}
+
+.quantity-round {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    z-index: 998;
+    background: $secondary-font-color;
+    border-radius: 50%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+@media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+}
+}
+
+.quantity-content {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+@media screen and (min-width: $desktop) {
+    top: 4px;
+}
+}
+
+.quantity-number {
+    font-family: 'TitanOne';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $primary-font-color;
+
+@media screen and (min-width: $desktop) {
+    margin-bottom: 2px;
+    font-size: 46px;
+    line-height: 1.15;
+}}
+
+.quantity-type {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+    color: $secondary-font-color;
+
+@media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.29;
+}
+}
+
+
+// Hero_girl
+.hero__girl {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    width: 168px;
+    height: 133px;
+
+@media screen and (max-width: 767px) {
+    & {
+        display: none;
+    }
+}
+@media screen and (min-width: $desktop) {
+    right: 109px;
+    width: 293px;
+    height: 232px;
+}
+}
+
+// Hero_milk
+.hero__milk {
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+    width: 124px;
+    height: 126px;
+
+@media screen and (max-width: 767px) {
+       & {
+           display: none;
+       }
+   }
+@media screen and (min-width: $desktop) {
+    left: 77px;
+    bottom: 45px;
+    width: 188px;
+    height: 191px;
+}
+}
+
+// Hero_text near the milk-image
+.hero__content {
+    position: absolute;
+    left: 130px;
+    bottom: 34px;
+
+@media screen and (max-width: 767px) {
+       & {
+           display: none;
+       }
+   } 
+@media screen and (min-width: $desktop) {
+    left: 295px;
+    bottom: 56px;
+
+}
+}
+
+.hero__text {
+    width: 114px;
+    margin-bottom: 7px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 150%;
+    color: $secondary-font-color;
+
+@media screen and (min-width: $desktop) {
+    width: 200px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 140%;
+}}
+
+.hero__button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    background-color: $secondary-font-color;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: $primary-font-color; 
+
+@media screen and (min-width: $desktop) {
+    width: 26px;
+    height: 26px;
+}
+}
+
+.hero__icon {
+    fill: currentColor;
+}
