@@ -1,5 +1,5 @@
 .advantages {
-    background-color: $primary-bcg-color;
+    background-color: $secondary-bcg-color;
 }
 
 .visualy-hidden {
@@ -13,14 +13,19 @@
     overflow: hidden;
 }
 
+// .advantages-item__cow {
+//     display: flex;
+// }
+
 .advantages-item__cow::before {
-    @media screen and (min-width: 480px) {
-        max-width: 480px;
-        min-width: 320px;
+    @media screen and (max-width: 480px) {
+        // width: 100%;
+        // min-width: 290px;
+        // max-width: 450px
         content: "";
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: 34px;
+        height: 51px;
         background-image: url(../images/advantages/advantages-cow@3x.png);
         background-size: contain;
         margin-top: 38px;
@@ -29,6 +34,39 @@
       }
 }
     
+.advantages-item__apple::before {
+    @media screen and (max-width: 480px) {
+        max-width: 480px;
+        min-width: 320px;
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/advantages/advantages-apple@3x.png);
+        background-size: contain;
+        margin-top: 38px;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+      }
+}
+
+.advantages-item__heart::before {
+    @media screen and (max-width: 480px) {
+        max-width: 480px;
+        min-width: 320px;
+        content: "";
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 60px;
+        background-image: url(../images/advantages/advantages-heart@3x.png);
+        background-size: contain;
+        margin-top: 38px;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+      }
+}
+
     //   @media screen and (min-width: 768px) {
     //     padding: 0 36px;
     //     width: 768px;
@@ -79,7 +117,10 @@
 
 .advantages__text {
     display: block;
-
+    // width: 320px;
+    height: auto;
+    margin-right: 70px;
+    // margin-left: 20px;
     font-family: DMSans;
     font-size: 12px;
     font-style: normal;
