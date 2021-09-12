@@ -7,15 +7,14 @@
   width: 100%;
   padding-top: 86px;
   padding-bottom: 113px;
-
-  background-image: linear-gradient(to top, rgb(255, 245, 246) 90%, rgb(255, 255, 255) 0%),
-    url('../images/contacts/RedDots.png');
+  background-image: url('../images/contacts/RedDots.png'),
+    linear-gradient(to top, rgb(255, 245, 246) 90%, rgb(255, 255, 255) 0%);
 
   @media screen and (min-width: 767px) {
     padding-top: 119px;
     padding-bottom: 158px;
-    background-image: linear-gradient(to top, rgb(255, 245, 246) 80%, rgb(255, 255, 255) 0%),
-      url('../images/contacts/RedDots@2x.png');
+    background-image: url('../images/contacts/RedDots@2x.png'),
+      linear-gradient(to top, rgb(255, 245, 246) 78%, rgb(255, 255, 255) 0%);
   }
   @media screen and (min-width: 1280px) {
     padding-top: 132px;
