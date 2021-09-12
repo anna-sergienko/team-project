@@ -1,0 +1,91 @@
+.advantages {
+    background-color: $primary-bcg-color;
+}
+
+.visualy-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.advantages-item__cow::before {
+    @media screen and (min-width: 480px) {
+        max-width: 480px;
+        min-width: 320px;
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/advantages/advantages-cow@3x.png);
+        background-size: contain;
+        margin-top: 38px;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+      }
+}
+    
+    //   @media screen and (min-width: 768px) {
+    //     padding: 0 36px;
+    //     width: 768px;
+    //   }
+    
+    //   @media screen and (min-width: 1280px) {
+    //     padding: 0 115px;
+    //     width: 1280px;
+    //   }
+
+
+// .advantages-item::before {
+//     content: "";
+//     display: inline-block;
+//     width: 40px;
+//     height: 40px;
+//     background-image: url(../images/advantages/advantages-heart.png);
+//     background-size: contain;
+//     margin-top: 38px;
+//     margin-bottom: 10px;
+//     background-repeat: no-repeat;
+// }
+
+// .advantages-item::before {
+//     content: "";
+//     display: inline-block;
+//     width: 40px;
+//     height: 40px;
+//     background-image: url(../images/advantages/advantages-heart.png);
+//     background-size: contain;
+//     margin-top: 38px;
+//     margin-bottom: 10px;
+//     background-repeat: no-repeat;
+// }
+
+.advantages__data {
+    display: block;
+    margin-bottom: 13px;
+
+    font-family: 'TitanOne';
+    font-size: 36px;
+    font-style: normal;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: $primary-font-color;
+}
+
+.advantages__text {
+    display: block;
+
+    font-family: DMSans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $base-color
+}
