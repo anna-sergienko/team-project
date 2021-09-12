@@ -1,0 +1,153 @@
+.container {
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 36px;
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 115px;
+    width: 1280px;
+  }
+}
+
+body {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* DMSans-Bold-700 */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff");
+}
+
+/* DMSans-Medium-500 */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+  src: url("../fonts/DMSans-Medium.woff2") format("woff2"), url("../fonts/DMSans-Medium.woff") format("woff");
+}
+
+/* DMSans-Regular-400 */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff");
+}
+
+/* TitanOne-regular */
+@font-face {
+  font-family: 'TitanOne';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/TitanOne.woff2") format("woff2"), url("../fonts/TitanOne.woff") format("woff");
+}
+
+.advantages {
+  background-color: #ffb8ca;
+}
+
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 480px) {
+  .advantages-item__cow::before {
+    max-width: 480px;
+    min-width: 320px;
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/advantages/advantages-cow@3x.png);
+    background-size: contain;
+    margin-top: 38px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+  }
+}
+
+.advantages__data {
+  display: block;
+  margin-bottom: 13px;
+  font-family: 'TitanOne';
+  font-size: 36px;
+  font-style: normal;
+  line-height: 41px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #d41443;
+}
+
+.advantages__text {
+  display: block;
+  font-family: DMSans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+/*# sourceMappingURL=main.css.map */
