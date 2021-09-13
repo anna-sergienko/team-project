@@ -1,0 +1,125 @@
+.header {
+  background-color: transparent;
+  padding-top: 6px;
+  z-index: 998;
+  width: 100%;
+  position: absolute;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-nav-box {
+  @media screen and (max-width: 1279px) {
+    display: none;
+    margin-left: auto;
+  }
+}
+
+.header-nav-box {
+  display: flex;
+  align-items: center;
+}
+
+.header-item:not(:last-child) {
+  @media screen and (min-width: 1280px) {
+    margin-right: 35px;
+  }
+}
+
+.header-link {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  display: flex;
+  align-items: center;
+
+  color: $secondary-font-color;
+
+  @include transition1(color);
+}
+
+.header-link:focus,
+.header-link:hover {
+  color: $primary-font-color;
+}
+
+.button-mobmenu {
+  padding: 0;
+  background-color: inherit;
+  fill: $primary-font-color;
+  border: none;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 421px) and (max-width: 1279px) {
+    margin-right: 30px;
+  }
+}
+
+.header-button {
+  padding: 0px 37px;
+  width: 160px;
+  height: 44px;
+  // margin: 0 auto;
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: $primary-font-color;
+  background-color: $secondary-font-color;
+  border-radius: 22px;
+  outline: none;
+  border: none;
+
+  @include transition1(background-color);
+
+  @media screen and (max-width: $mobile) {
+    display: none;
+    border: none;
+    outline: none;
+  }
+}
+
+.header-button:focus,
+.header-button:hover {
+  background-color: $secondary-btn-color;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.header-svg {
+  fill: $primary-font-color;
+  margin-left: 12px;
+}
+@media screen and (max-width: 1279px) {
+  .header-navigation {
+    display: none;
+  }
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
