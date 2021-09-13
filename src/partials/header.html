@@ -1,29 +1,37 @@
 <section class="header" id="header">
   <div class="header-container container">
     <a class="header-logo animate__animated animate__bounce" href="/">
-      <img src="./images/header/desktop/header-logo-.png" alt="IceCream" />
+      <img
+        srcset="
+          ./images/header/desktop/header-logo-.png    1x,
+          ./images/header/desktop/header-logo-@2x.png 2x,
+          ./images/header/desktop/header-logo@3x.png  3x
+        "
+        src="./images/header/desktop/header-logo-.png"
+        alt="IceCream"
+      />
     </a>
 
     <div class="header-nav-box">
       <nav class="header-navigation" data-menu>
         <ul class="header-list" id="header-list">
           <li class="header-item"><a class="header-link" href="./index.html">Home</a></li>
-          <li class="header-item"><a class="header-link" href="">About us</a></li>
-          <li class="header-item"><a class="header-link" href="">How it’s made?</a></li>
-          <li class="header-item"><a class="header-link" href="">Our products</a></li>
-          <li class="header-item"><a class="header-link" href="">Contact</a></li>
+          <li class="header-item"><a class="header-link" href="#customer-reviews">About us</a></li>
+          <li class="header-item"><a class="header-link" href="#about">How it’s made?</a></li>
+          <li class="header-item"><a class="header-link" href="#products">Our products</a></li>
+          <li class="header-item"><a class="header-link" href="#contacts">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-menu">
         <button
-          class="button-mobmenu is-open"
+          class="button-mobmenu"
           type="button"
           aria-expanded="false"
           aria-controls="header-list"
           data-menu-button
         >
-          <svg width="20" height="12" aria-label="переключатель мобильного меню">
+          <svg width="50" height="30" aria-label="переключатель мобильного меню">
             <use class="icon-menu" href="./images/sprite/sprite.svg#icon-burger"></use>
           </svg>
         </button>
