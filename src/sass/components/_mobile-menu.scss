@@ -5,15 +5,15 @@
     box-sizing: border-box;
     flex-direction: column;
     position: fixed;
-    width: 70%;
+    width: 60%;
     height: 100vh;
     top: 0;
-    left: 100%;
-    transform: translateX(-140%) translateY(0%);
+    right: 0;
+    transform: translateX(100%);
     // visibility: hidden;
     pointer-events: none;
     overflow: scroll;
-    z-index: 3;
+    z-index: 999;
 
     padding-top: 60px;
     background-color: #e17992;
@@ -22,7 +22,7 @@
     box-shadow: (-8px 0px 20px rgba(0, 0, 0, 0.25));
 
      &.is-open {
-         transform: translateX(-70%) translateY(0%);
+         transform: translateX(0);
          visibility: visible;
          pointer-events: visible;
      }
@@ -31,6 +31,8 @@
         display: none;
     }
 }
+
+
 .close-button {
     display: inline-flex;
     background-color: transparent;
