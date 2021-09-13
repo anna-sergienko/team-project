@@ -19,13 +19,14 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 320px;
     height: 502px;
+    width: 320px;
     
 @media screen and (max-width: 320px) {
-     overflow: hidden;
+    max-width: 320px;
+    overflow: hidden;
 }
-    
+   
 @media screen and (min-width: $tablet) and (max-width: 1279px) {
     width: 700px;
     height: 399px;
@@ -49,8 +50,8 @@
     left: 0;
 }
 @media screen and (min-width: $desktop) {
-    top: 171px;
-    left: 115px;
+    top: 173px;
+    left: 117px;
 }
 }
 
@@ -173,12 +174,15 @@
 // Hero_Ice-cream
 .hero__ice-cream {
     position: absolute;
-    bottom: 0;
-    right: 32px;
+
     z-index: 998;
     width: 171px;
     height: 410px;
    
+@media screen and (max-width: 767px) {
+    bottom: 0;
+    left: 117px;
+}  
 
 @media screen and (min-width: $tablet) and (max-width: 1279px) {
     bottom: 0;
@@ -188,27 +192,25 @@
 }
 
 @media screen and (min-width: $desktop) {
-    bottom: 1;
+    bottom: 0;
     right: 450px;
     width: 236px;
     height: 557px;
 }
 }
 
+
 // Hero_big-round
 .hero__round {
     position: absolute;
     top: 83px;
-    left: 16px;
+    left: 36px;
     width: 346px;
     height: 344px;
     z-index: 997;
     border-radius: 50%;
     background: $date-font-color;
 
-@media screen and (max-width: 479px) {
-    max-width: 346px;
-}
 
 @media screen and (min-width: $tablet) and (max-width: 1279px) {
     top: 31px;
@@ -431,6 +433,7 @@
     border: none;
     cursor: pointer;
     color: $primary-font-color; 
+    @include transition1(background-color);
 
     &:hover,
     &:focus {
