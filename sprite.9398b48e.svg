@@ -2,7 +2,10 @@
 <symbol id="icon-arrow" viewBox="0 0 32 32">
 <path d="M24.464 17.584l-13.759 13.759c-0.875 0.876-2.294 0.876-3.169 0s-0.875-2.294 0-3.169l12.175-12.175-12.175-12.174c-0.875-0.875-0.875-2.294 0-3.169s2.294-0.875 3.169 0l13.759 13.759c0.437 0.438 0.656 1.011 0.656 1.584s-0.219 1.147-0.656 1.584z"></path>
 </symbol>
-<symbol id="icon-burger" viewBox="0 0 32 32"><path d="M6.4 11.733V9.6h19.2v2.133H6.4zm0 5.334h19.2v-2.133H6.4v2.133zm0 5.333h19.2v-2.133H6.4V22.4z"/></symbol>
+<symbol id="icon-burger" viewBox="0 0 46 32">
+      <path fill="none" stroke="#d41443" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"
+        stroke-width="2.2857" d="M0 2.286h45.714M0 16h45.714M0 29.714h45.714"></path>
+    </symbol>
 <symbol id="icon-close" viewBox="0 0 32 32">
 <path d="M32 1.885l-1.885-1.885-14.115 14.115-14.115-14.115-1.885 1.885 14.115 14.115-14.115 14.115 1.885 1.885 14.115-14.115 14.115 14.115 1.885-1.885-14.115-14.115z"></path>
 </symbol>
