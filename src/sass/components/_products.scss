@@ -283,7 +283,7 @@
 
 .products__text {
   position: relative;
-  font-family: 'DMSans';
+  font-family: 'DM Sans';
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.04em;
@@ -295,16 +295,14 @@
     line-height: 1.52;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
     transform: scale(1);
-    transition: transform 500ms ease-in-out $time-function;
+    @include transition1(transform);
     &:hover,
     &:focus {
       font-size: 13px;
       transform: scale(1.25);
-      transition: transform 500ms ease-in-out $time-function;
+      @include transition1(transform);
     }
   }
 
@@ -313,29 +311,31 @@
     line-height: 1.76;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 20px;
     transform: scale(1);
-    transition: transform 500ms ease-in-out $time-function;
+    @include transition1(transform);
     &:hover,
     &:focus {
       transform: scale(1.1);
-      transition: transform 500ms ease-in-out $time-function;
+      @include transition1(transform);
     }
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 10px;
     transform: scale(1);
-    transition: transform 500ms ease-in-out $time-function;
+    @include transition1(transform);
     &:hover,
     &:focus {
       transform: scale(1.15);
-      transition: transform 500ms ease-in-out $time-function;
+      @include transition1(transform);
     }
   }
 }
@@ -343,6 +343,7 @@
 .products__hover-text {
   padding-left: 20px;
   padding-right: 20px;
+
   @media screen and (min-width: 1280px) {
     padding-left: 15px;
     padding-right: 15px;
@@ -351,17 +352,17 @@
 .products__text--first:hover,
 .products__text--first:focus {
   color: $primary-btn-color;
-  transition: color 500ms ease-in-out $time-function;
+  @include transition1(color);
 }
 .products__text--second:hover,
 .products__text--second:focus {
   color: rgb(190, 120, 90);
-  transition: color 500ms ease-in-out $time-function;
+  @include transition1(color);
 }
 .products__text--third:hover,
 .products__text--third:focus {
   color: darkgreen;
-  transition: color 500ms ease-in-out $time-function;
+  @include transition1(color);
 }
 .products__ellipsis {
   i {
@@ -375,10 +376,10 @@
     left: 50%;
     top: -30px;
     transform: scale(1);
-    transition: transform 500ms ease-in-out;
+    @include transition1(transform);
     &:hover {
       transform: scale(1.5);
-      transition: transform 500ms ease-in-out;
+      @include transition1(transform);
     }
     &::after,
     &::before {
@@ -390,7 +391,7 @@
       border-radius: 50%;
       background-color: inherit;
       transform: scale(1);
-      transition: transform 500ms ease-in-out;
+      @include transition1(transform);
     }
     &::after {
       right: -10px;
@@ -401,7 +402,7 @@
     &:hover::after,
     &:hover::before {
       transform: scale(1.5);
-      transition: transform 500ms ease-in-out;
+      @include transition1(transform);
     }
   }
 }
@@ -413,22 +414,29 @@
   border: 0;
   outline: 0;
   color: $primary-btn-color;
+  background-color: $secondary-font-color;
+  &:hover,
+  &:focus {
+    background-color: $primary-btn-color;
+    @include transition1(background-color);
+  }
 }
 
 .products__control-icon {
   fill: currentColor;
-  &:hover,
-  &:focus {
-    color: $icon-bcg-color;
-  }
+}
+.products__control:hover svg,
+.products__control:focus svg {
+  color: $icon-bcg-color;
+  @include transition1(color);
 }
 
 /* Анимация */
 
 @keyframes productsIcon {
   0% {
-    transform: rotate(100deg);
-    transform-origin: bottom top;
+    transform: rotateY(100deg);
+    transform-origin: top bottom;
   }
 
   50% {
@@ -437,7 +445,7 @@
   }
 
   100% {
-    transform: rotateX(0deg);
-    transform-origin: bottom top;
+    transform: rotateY(0deg);
+    transform-origin: top bottom;
   }
 }
