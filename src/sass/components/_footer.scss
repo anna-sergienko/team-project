@@ -92,7 +92,7 @@
 
 .footer-socials {
   display: flex;
-  &__item {
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +101,6 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    margin-right: 28px;
 
     @include transition1(background-color);
 
@@ -109,11 +108,13 @@
     &:focus {
       background-color: $primary-btn-color;
     }
+  }
+  &__item {
+    margin-right: 28px;
 
     &:last-child {
       margin-right: 0;
     }
-
     svg {
       width: 20px;
       height: 20px;
