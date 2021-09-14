@@ -86,11 +86,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  padding: 25px;
   @media screen and (max-width: 767px) {
     width: 280px;
     height: 485px;
-
     &:nth-child(1) {
       margin-bottom: 135px;
     }
@@ -102,6 +101,7 @@
     width: 220px;
     height: 485px;
     margin-right: 20px;
+    padding: 20px;
   }
   @media screen and (min-width: 1280px) {
     display: flex;
@@ -109,6 +109,7 @@
     align-items: center;
     width: 329px;
     height: 525px;
+    padding: 30px;
     margin-right: 24px;
   }
 }
@@ -130,6 +131,7 @@
 
 .products__wrapper-title {
   position: relative;
+  padding-top: 120px;
   font-family: 'TitanOne';
   line-height: 1.15;
   letter-spacing: 0.04em;
@@ -137,19 +139,16 @@
   text-align: center;
   text-transform: uppercase;
   @media screen and (max-width: 767px) {
-    padding-top: 120px;
     margin-bottom: 65px;
     font-size: 20px;
   }
 
   @media screen and (min-width: 768px) {
-    padding-top: 120px;
-    margin-bottom: 66px;
+    margin-bottom: 55px;
     font-size: 20px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 120px;
     margin-bottom: 50px;
     font-size: 30px;
   }
@@ -204,7 +203,7 @@
     width: 220px;
     height: 224px;
     left: calc((100% - 220px) / 2);
-    top: -140px;
+    top: -130px;
     background-size: 220px 224px;
     animation: productsIcon 1000ms linear;
   }
@@ -288,32 +287,31 @@
   font-size: 14px;
   letter-spacing: 0.04em;
   color: $secondary-font-color;
-  text-align: justify;
+  text-align: center;
   @media screen and (max-width: 767px) {
-    width: 200px;
-    height: 124px;
+    /*width: 230px;
+    height: 115px;*/
+    padding-left: 15px;
+    padding-right: 15px;
     line-height: 1.52;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     transform: scale(1);
     @include transition1(transform);
     &:hover,
     &:focus {
-      font-size: 13px;
       transform: scale(1.25);
       @include transition1(transform);
     }
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.76;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     transform: scale(1);
     @include transition1(transform);
     &:hover,
@@ -327,9 +325,9 @@
     font-size: 16px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
     margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     transform: scale(1);
     @include transition1(transform);
     &:hover,
@@ -340,30 +338,19 @@
   }
 }
 
-.products__hover-text {
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media screen and (min-width: 1280px) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
 .products__text--first:hover,
 .products__text--first:focus {
-  color: $primary-btn-color;
   @include transition1(color);
 }
 .products__text--second:hover,
 .products__text--second:focus {
-  color: rgb(190, 120, 90);
   @include transition1(color);
 }
 .products__text--third:hover,
 .products__text--third:focus {
-  color: darkgreen;
   @include transition1(color);
 }
+
 .products__ellipsis {
   i {
     display: block;
@@ -417,18 +404,13 @@
   background-color: $secondary-font-color;
   &:hover,
   &:focus {
-    background-color: $primary-btn-color;
+    background-color: $secondary-btn-color;
     @include transition1(background-color);
   }
 }
 
 .products__control-icon {
   fill: currentColor;
-}
-.products__control:hover svg,
-.products__control:focus svg {
-  color: $icon-bcg-color;
-  @include transition1(color);
 }
 
 /* Анимация */
