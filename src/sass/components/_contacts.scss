@@ -94,7 +94,8 @@
 }
 
 .contacts-item {
-  margin-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .contacts__location {
@@ -131,7 +132,6 @@
   border-bottom: 1px solid #e1e1e1;
   padding-top: 25px;
   padding-bottom: 25px;
-  margin-bottom: 25px;
 }
 .schedule__box {
   margin-bottom: 10px;
@@ -263,8 +263,8 @@
 .contact__buttons--second:focus {
   background-color: #ecebeb;
 }
-.contact__buttons--fhf:hover,
-.contact__buttons--fhf:focus {
+.contact__buttons--first:hover,
+.contact__buttons--first:focus {
   background-color: #e0076f;
   border-radius: 22px;
 }
