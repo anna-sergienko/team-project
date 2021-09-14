@@ -20,10 +20,14 @@
     margin-left: auto;
     margin-right: auto;
     height: 502px;
-    width: 320px;
     
 @media screen and (max-width: 320px) {
     max-width: 320px;
+    overflow: hidden;
+}   
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    max-width: 450px;
     overflow: hidden;
 }
    
@@ -41,9 +45,17 @@
 .hero__header {
     display: block;
     position: absolute;
+    z-index: 999;
+
+@media screen and (max-width: 320px) {
     top: 193px;
     left: 20px;
-    z-index: 999;
+} 
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    top: 193px;
+    left: 17.5%;
+}
 
 @media screen and (min-width: $tablet) and (max-width: 1279px) {
     top: 102px;
@@ -174,15 +186,19 @@
 // Hero_Ice-cream
 .hero__ice-cream {
     position: absolute;
-
     z-index: 998;
     width: 171px;
     height: 410px;
    
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 320px) {
     bottom: 0;
     left: 117px;
-}  
+}     
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    bottom: 0;
+    left: 40.0%;
+}
 
 @media screen and (min-width: $tablet) and (max-width: 1279px) {
     bottom: 0;
@@ -203,14 +219,21 @@
 // Hero_big-round
 .hero__round {
     position: absolute;
-    top: 83px;
-    left: 36px;
     width: 346px;
     height: 344px;
     z-index: 997;
     border-radius: 50%;
     background: $date-font-color;
 
+@media screen and (max-width: 320px) {
+    top: 83px;
+    left: 36px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    top: 83px;
+    left: 20.7%;
+}
 
 @media screen and (min-width: $tablet) and (max-width: 1279px) {
     top: 31px;
