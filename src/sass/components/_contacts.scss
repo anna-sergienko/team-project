@@ -183,7 +183,13 @@
     font-size: 16px;
     line-height: 1.81;
   }
+  @include transition1(color);
 }
+.address--aiming:hover,
+.address--aiming:focus {
+  color: tomato;
+}
+
 // Кнопочки
 .contact__buttons {
   display: flex;
@@ -201,9 +207,7 @@
     margin-top: 86px;
   }
 }
-.contact__buttons--item {
-  @include transition1(background-color);
-}
+
 .contact__buttons--item {
   display: flex;
   align-items: center;
@@ -228,6 +232,7 @@
   @media screen and (min-width: 1280px) {
     width: 198px;
   }
+  @include transition1(background-color);
 }
 .contact__buttons--distance:not(:last-child) {
   @media screen and (max-width: 768px) {
