@@ -1,0 +1,307 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 186, 0.63);
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
+  transition: opacity 250ms $time-function, visibility 250ms $time-function;
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 609px;
+  width: 450px;
+  padding: 40px;
+
+  background-color: $secondary-font-color;
+  box-shadow: 0px 1px 3px $shadow-color;
+  border-radius: 15px;
+  @media screen and (max-width: 450px) {
+    max-width: 450px;
+    width: 100vw;
+    max-height: 609px;
+    height: 100vh;
+  }
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+/* ------Формы заполнения------ */
+.modal__form {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
+}
+.modal__title {
+  margin-bottom: 12px;
+  font-family: 'TitanOne';
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-font-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+}
+.modal__registry:not(:last-child) {
+  margin-bottom: 10px;
+}
+.form-field {
+  display: block;
+  position: relative;
+  // font-family: 'DM Sans';
+}
+.modal__text {
+  display: block;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $base-color;
+  margin-bottom: 4px;
+}
+.modal__input {
+  padding: 0;
+  height: 40px;
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
+    width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
+  padding-left: 42px;
+  border: 1px solid $primary-font-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: border 250ms $time-function;
+}
+.modal__icon {
+  position: absolute;
+  left: 12px;
+  top: 28px;
+  fill: rgba(33, 33, 33, 1);
+  transition: fill 250ms $time-function;
+}
+.modal__comments {
+  margin-bottom: 20px;
+}
+.modal__commentary {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid $primary-font-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms $time-function;
+  resize: none;
+  outline: none;
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
+    width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
+}
+.modal__commentary::placeholder {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-field:focus-within > .modal__icon,
+.form-field:hover > .modal__icon {
+  fill: $primary-btn-color;
+}
+.form-field:focus-within > .modal__input:focus,
+.form-field:focus-within > .modal__commentary:focus,
+.form-field > .modal__input:hover,
+.form-field > .modal__commentary:hover {
+  border: 1px solid $primary-btn-color;
+}
+
+.modal__policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.modal__square-icon {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid $icon-bcg-color;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform 250ms $time-function;
+}
+.modal__checkbox:checked + .modal__square-icon {
+  background-image: url(../images/full-check.svg);
+  background-size: cover;
+  background-color: $primary-btn-color;
+  transform: scale(1.2);
+  border: none;
+}
+
+.modal__agreement {
+  display: flex;
+  margin-left: 7px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: $base-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.modal__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: $primary-btn-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.modal__button {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: $primary-btn-color;
+  color: $secondary-font-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal__button:focus,
+.modal__button:hover {
+  background-color: $primary-btn-color;
+  box-shadow: 0px 4px 4px $shadow-color;
+}
+/* -------Кнопка закрытия------ */
+.modal__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  // border: 1px solid $primary-font-color;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: $secondary-font-color;
+}
+.modal__close-icon {
+  position: absolute;
+  fill: $primary-font-color;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: color 250ms $time-function;
+}
+.modal__close-icon:focus,
+.modal__close-icon:hover {
+  color: $primary-btn-color;
+}
+/* ---------------------------- */
+// Шрифты в меню
+@media screen and (max-width: 450px) {
+  .modal__square-icon {
+    width: 14px;
+    height: 12px;
+  }
+  .modal__agreement,
+  .modal__link {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .modal__square-icon {
+    width: 12px;
+    height: 10px;
+  }
+  .modal__agreement,
+  .modal__link {
+    font-size: 9px;
+    line-height: 8px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .modal__square-icon {
+    width: 10px;
+    height: 10px;
+  }
+  .modal__agreement,
+  .modal__link {
+    font-size: 7px;
+    line-height: 8px;
+  }
+}
