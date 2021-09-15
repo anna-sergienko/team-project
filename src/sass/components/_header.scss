@@ -93,7 +93,7 @@
 
   @include transition1(background-color);
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet) {
     display: none;
     border: none;
     outline: none;
