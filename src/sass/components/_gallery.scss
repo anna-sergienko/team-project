@@ -28,8 +28,15 @@
   -moz-border-radius: 20px;
   overflow: hidden;
   border: none;
+
+  transition: transform 250ms $time-function;
 }
 
+.ice-box--border:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
 .block-1 {
   grid-column: 1/4;
   grid-row: 4/7;
