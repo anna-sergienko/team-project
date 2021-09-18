@@ -44,9 +44,14 @@
 }
 .contacts-box {
   width: 220px;
+  transition: transform 250ms $time-function;
   @media screen and (min-width: 1280px) {
     width: 330px;
   }
+}
+.contacts-box:hover,
+.contacts-box:focus {
+  transform: scale(1.1);
 }
 .contacts-box:not(:last-child) {
   @media screen and (max-width: 767px) {
